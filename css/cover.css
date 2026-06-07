@@ -18,6 +18,7 @@
   font-family: 'DancingScript-b';
   src: url('../font/MapoGoldenPier.ttf') format('truetype');
 }
+
 /* Mobile and PC*/
 
 .pc-only {
@@ -34,6 +35,30 @@
     .mobile-only {
         display: inline;
     }
+}
+
+/*Header*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.top-div {
+    width: 100%;
+}
+
+.cover-container {
+    max-width: 52em;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.main-image {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /*CONTACT*/
