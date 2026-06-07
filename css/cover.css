@@ -1,511 +1,92 @@
-/*
- * Globals
- */
-
- @font-face {
+@font-face {
   font-family: 'NanumMyeongjo-r';
   src: url('../font/NanumMyeongjo-Regular.ttf') format('truetype');
 }
-@font-face {
-  font-family: 'NanumMyeongjo-e';
-  src: url('../font/NanumMyeongjo-ExtraBold.ttf') format('truetype');
-}
+
 @font-face {
   font-family: 'NanumMyeongjo-b';
   src: url('../font/NanumMyeongjo-Bold.ttf') format('truetype');
 }
-@font-face {
-  font-family: 'DancingScript-b';
-  src: url('../font/MapoGoldenPier.ttf') format('truetype');
-}
+
 @font-face {
   font-family: 'Aritta-m';
   src: url('../font/아리따-돋움(TTF)-Medium.ttf') format('truetype');
 }
 
-/* Mobile and PC*/
-
-.pc-only {
-    display: inline;
-}
-.mobile-only {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .pc-only {
-        display: none;
-    }
-    .mobile-only {
-        display: inline;
-    }
-}
-
-/*Header*/
-/*이미지*/
-header {
-    width: 100%;
-    max-width: 520px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.main-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 760px;
-    object-fit: cover;
-    object-position: center;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.top-div {
-    width: 100%;
-}
-
-.cover-container {
-    max-width: 52em;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.main-image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/*CONTACT*/
-
-.contact-icons{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 30px 0;
-}
-
-.contact-icons img{
-    width: 42px;
-    height: 42px;
-    transition: 0.2s;
-}
-
-.contact-icons img:hover{
-    transform: scale(1.1);
-}
-
-
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-
-.top-title {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  color: #333;
-  text-shadow: none;
-  font-family: NanumMyeongjo-b;
-  font-size: 1.7rem;
-}
-
-.top-title-sub{
-  margin-top: 1em;
-  color: #333;
-  text-shadow: none;
-  font-family: NanumMyeongjo-b;
-  font-size: 1.2rem;
-}
-
-
-/*
- * Base structure
- */
-
-html,
-body {
-  height: 100%;
-}
-
+/* 기본 */
 html {
   font-size: 16px;
 }
 
-@media screen and (max-width: 430px) {
-  html {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  html {
-    font-size: 13px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  html {
-    font-size: 11px;
-  }
-}
-
 body {
-  display: -ms-flexbox;
-  display: flex;
-  color: #fff;
-}
-
-/* 모바일 기본 */
-.cover-container {
-    max-width: 32em;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* 태블릿 이상 */
-@media screen and (min-width: 768px) {
-    .cover-container {
-        max-width: 42em;
-    }
-}
-
-/* PC */
-@media screen and (min-width: 1000px) {
-    .cover-container {
-        max-width: 60em;
-    }
-}
-
-.cover-container-2 {
-  max-width: 42em;
-  color: black;
-}
-
-
-/*
- * Header
- */
-.masthead {
-  margin-bottom: 2rem;
-}
-
-.masthead-brand {
-  margin-bottom: 0;
-}
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-.cover-heading {
-  margin-bottom: -5rem;
-  color: #29462b;
-  font-family: NanumMyeongjo-b;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center;
 }
 
 .top-div {
   width: 100%;
 }
 
+/* PC / 모바일 줄바꿈 */
+.pc-only {
+  display: inline;
+}
 
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .pc-only {
+    display: none;
   }
-  .nav-masthead {
-    float: right;
+
+  .mobile-only {
+    display: inline;
   }
 }
 
-
-/*
- * section
- */
-.section1-title {
-  margin-top: 1em;
-  color: #333;
-  text-shadow: none;
-  font-size: 1rem;
+/* 헤더 이미지 */
+header {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-.section1-main {
-    padding: 0 8px;
-    line-height: 1.8;
-    background-color: #fefefe;
-    font-family: NanumMyeongjo-r;
-    line-height: 2em;
-    font-size: 1.2rem;
+.main-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.section1-sub {
-  font-family: NanumMyeongjo-b;
-  line-height: 2.1em;
-  font-size: 1.35rem;
+/* 공통 폭 */
+.cover-container {
+  max-width: 32em;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.section1-sub2 {
-  font-family: NanumMyeongjo-b;
-  line-height: 2.1em;
-  font-size: 1.35rem;
+@media screen and (min-width: 768px) {
+  .cover-container {
+    max-width: 42em;
+  }
 }
 
-.section1-sub2 .small {
-  font-size: 1.2rem;
+@media screen and (min-width: 1000px) {
+  .cover-container {
+    max-width: 60em;
+  }
 }
 
-.section2-title {
-  margin-top: 1em;
-  color: #333;
-  text-shadow: none;
-}
-
-.section2-main {
-  font-family: NanumMyeongjo-b;
-  line-height: 1.5em;
-  font-size: 1.35rem;
-  position: relative;
-}
-
-
-.section2-main::after {
-  width:100%;
-  height:100%;
-  content: "";
-  background-image: url("../img/section2.jpg");
-  background-size: cover;
-  background-position: right;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.section2-sub {
-  font-family: NanumMyeongjo-b;
-  line-height: 2em;
-  font-size: 1.2rem;
-}
-
-.section3 {
-  background-color: #f9f9f9;
-}
-
-.section3-title {
-  margin-top: 1em;
-  color: #333;
-  text-shadow: none;
-}
-
-.section3-main {
-  font-family: DancingScript-b;
-  line-height: 1.5em;
-  font-size: 2rem;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-.section3-image {
-  box-shadow : 2px 2px 5px #999;
-}
-
-.section4-title {
-  margin-top: 1em;
-  color: #333;
-  text-shadow: none;
-}
-
-.section4-sec1-2 {
-  padding-top: 0.1rem;
-}
-
-.section4-sec1 {
-  font-family: NanumMyeongjo-r;
-  line-height: 1.5em;
-  font-size: 1.3rem;
-}
-
-.section4-sec2 {
-  font-family: NanumMyeongjo-b;
-  line-height: 1.5em;
-  font-size: 1.35rem;
-}
-
-.section4-sec3 {
-  font-family: NanumMyeongjo-b;
-  line-height: 1.5em;
-  font-size: 1.35rem;
-  background: none;
-  border: none;
-  color: rgb(91, 123, 165);
-}
-
-.section4-sec3-g {
-  font-family: NanumMyeongjo-b;
-  line-height: 1.5em;
-  font-size: 1.35rem;
-  background: none;
-  border: none;
-  color: #a86868;
-}
-
-.section5 {
-  background-color: #f9f9f9;
-}
-
-.section5-title {
-  margin-top: 1em;
-  color: #333;
-  text-shadow: none;
-}
-
-.section5-main {
-  font-family: DancingScript-b;
-  line-height: 1.5em;
-  font-size: 2rem;
-}
-
-.section5-sub {
-  font-family: NanumMyeongjo-r;
-  line-height: 1.5em;
-  font-size: 1.3rem;
-}
-
-.section5-table {
-  font-family: NanumMyeongjo-r;
-  line-height: 1.5em;
-  font-size: 1.3rem;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
-
-.section5-table tr td{
-  padding-top: 0.8em;
-  padding-bottom: 0.8em;
-}
-
-.section5-table tr .sun{
-  color: red;
-}
-
-.section5-table tr .check{
-  color: white;
-  background-color: chocolate;
-  border-radius: 50px;
-}
-
-.section5-table tr:first-child td{
-  padding-top: 2em;
-}
-
-.section5-table tr:last-child td{
-  padding-bottom: 2em;
-}
-
-.section6-title {
-  margin-top: 1em;
-  color: #333;
-  text-shadow: none;
-}
-
-.section6-location {
-  color: #333;
-  text-shadow: none;
-}
-
-.section6-main {
-  font-family: DancingScript-b;
-  line-height: 1.5em;
-  font-size: 2rem;
-}
-
-.section6-location-main {
-  font-family: NanumMyeongjo-e;
-  line-height: 1.5em;
-  font-size: 1.3rem;
-}
-
-.section6-sub {
-  font-family: NanumMyeongjo-r;
-  line-height: 1.5em;
-  font-size: 1.3rem;
-}
-
-.section6-location-sub {
-  font-family: NanumMyeongjo-r;
-  line-height: 1.5em;
-  font-size: 1.2rem;
-  text-align: left;
-}
-
-.section7 {
-  background-color: #ffffff;
-}
-
+/* 연락처 */
 .section7-title {
   margin-top: 1em;
   color: #333;
   text-shadow: none;
-}
-
-.section7-modal {
-  color: #333;
-}
-
-.section7-modal-title {
-  font-size: 1.4rem;
-}
-
-.section7-modal-content {
-  font-size: 1.2rem;
 }
 
 .section7-main {
@@ -514,64 +95,51 @@ body {
   font-size: 1.4rem;
 }
 
-.section7-button {
-  font-family: NanumMyeongjo-b;
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.contact-icons img {
+  width: 42px;
+  height: 42px;
+  transition: 0.2s;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* 소개 */
+.section1-title {
+  margin-top: 1em;
+  color: #333;
+  text-shadow: none;
+}
+
+.section1-main {
+  padding: 0 8px;
+  background-color: #fefefe;
+  font-family: NanumMyeongjo-r;
+  line-height: 2em;
   font-size: 1.2rem;
-  background-color: rgb(189, 147, 58);
-  color: #fff;
-  border: 0;
-  border-radius: 50px;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  margin-bottom: 0.7em;
 }
 
-.section7-button:hover {
-  background-color:rgb(189, 147, 58);
-  color: #fff;
-  border: 0;
+/* 작품 목록 */
+.works-list {
+  font-family: Aritta-m;
+  font-size: 1.2rem;
+  line-height: 2em;
+  color: #333;
+
+  width: fit-content;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.section7-button:active {
-  background-color: rgb(160, 125, 51);
-  color: #fff;
-  border: 0;
-}
-
-.section7-button:valid {
-  background-color: rgb(189, 147, 58);
-  color: #fff;
-  border: 0;
-}
-
+/* 푸터 */
 .section8 {
   background-color: #f9f9f9;
-}
-.works-list{
-    font-family: Aritta-m;
-    font-size: 1.2rem;
-    line-height: 2em;
-    color: #333;
-    max-width: 32em;
-    margin: 0 auto;
-    padding: 0 70px;
-    text-align: left;
-}
-/*
- * Cover
- */
-.cover {
-  padding: 0 1.5rem;
-}
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: 700;
-}
-
-
-/*
- * Footer
- */
-.mastfoot {
-  color: rgba(255, 255, 255, .5);
 }
