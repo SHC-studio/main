@@ -35,6 +35,27 @@
         display: inline;
     }
 }
+
+/*CONTACT*/
+
+.contact-icons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.contact-icons img{
+    width: 42px;
+    height: 42px;
+    transition: 0.2s;
+}
+
+.contact-icons img:hover{
+    transform: scale(1.1);
+}
+
+
 /* Links */
 a,
 a:focus,
