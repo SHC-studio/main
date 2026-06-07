@@ -88,11 +88,6 @@ crossorigin="anonymous">
         <p class="wow fadeInUp section7-title section7-main">
 			WORKS
 		</p>
-       <p class="wow fadeInUp works-list">
-       2024.8 배다리 곤충 이야기<br>
-       2025.7 배다리 여공 이야기<br>
-       2026.1 달구리 국밥집
-        </p>
 				
 <!-- 작품 영상 링크 -->
   <div class="works-gallery" id="works-gallery"></div>
@@ -120,19 +115,33 @@ crossorigin="anonymous">
 	
 	<script>
 const works = [
-    "L_NGWVQeWpU",
-    "nJ8HFMsHM6o",
-    "tLEQzvvPNk4"
+    {
+        title: "배다리 곤충 이야기",
+        id: "L_NGWVQeWpU"
+    },
+    {
+        title: "배다리 여공 이야기",
+        id: "nJ8HFMsHM6o"
+    },
+    {
+        title: "달구리 국밥집",
+        id: "tLEQzvvPNk4"
+    }
 ];
-
 const gallery = document.getElementById("works-gallery");
 
-works.forEach(id => {
+works.forEach(work => {
     gallery.innerHTML += `
         <a class="work-card"
-           href="https://youtu.be/${id}"
+           href="https://youtu.be/${work.id}"
            target="_blank">
-            <img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg">
+
+            <img src="https://i.ytimg.com/vi/${work.id}/hqdefault.jpg">
+
+            <p class="work-title">
+                ${work.title}
+            </p>
+
         </a>
     `;
 });
